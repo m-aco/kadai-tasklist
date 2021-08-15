@@ -2,8 +2,6 @@
 
 <ul>
   <% @tasks.each do |task| %>
-  <li><%= link_to task.id, task %> : <%= task.status %> &gt; <%= task.content %></li>
+    <li><%= link_to task.id, users_path %> : <%= task.status %> &gt; <%= task.content %></li>
   <% end %>
 </ul>
-
-<%= link_to '新規タスクの作成', new_task_path %>
