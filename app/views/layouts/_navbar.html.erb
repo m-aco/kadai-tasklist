@@ -2,8 +2,6 @@
   <% root_path %></li>
   <ul>
     <li><%= link_to 'Logout', logout_path, method: :delete %></li>
-    <li><%= link_to 'タスク一覧', user_path(current_user) %></li>
-      <li><%= link_to 'トップページ', toppages_path %></li>
   </ul>
 <% else %>
   <ul>

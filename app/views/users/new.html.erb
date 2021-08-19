@@ -1,6 +1,7 @@
 <h1>Sign up</h1>
 
 <%= form_with(model: @user) do |f| %>
+<%= render 'layouts/error_messages', model: f.object %>
 
       
         <%= f.label :name, 'Name' %>
