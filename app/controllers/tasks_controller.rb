@@ -3,18 +3,15 @@ class TasksController < ApplicationController
   before_action :correct_user, only: [:show, :edit, :update, :destroy]
   
   def index
-      @tasks = current_user.tasks.all
-  end
-
-  def show
+    @tasks = current_user.tasks.all
   end
 
   def new
-      @task = Task.new
+    @task = Task.new
   end
 
   def create
-      @task = current_user.tasks.build(task_params)
+    @task = current_user.tasks.build(task_params)
     if @task.save
       flash[:success] = 'タスクを作成しました。'
       redirect_to root_url
@@ -23,9 +20,6 @@ class TasksController < ApplicationController
       flash.now[:danger] = 'タスクの作成に失敗しました。'
       render :new
     end
-  end
-
-  def edit
   end
 
   def update

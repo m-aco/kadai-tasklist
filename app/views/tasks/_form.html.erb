@@ -1,11 +1,11 @@
 <%= form_with(model: task) do |f| %>
-<%= render 'layouts/error_messages', model: f.object %>
+  <%= render 'layouts/error_messages', model: f.object %>
   
-  <%= f.label :status, 'ステータス' %>
-  <%= f.text_field :status %>
+    <%= f.label :status, 'ステータス' %>
+    <%= f.text_field :status %>
+    
+    <%= f.label :content, 'タスク' %>
+    <%= f.text_field :content %>
   
-  <%= f.label :content, 'タスク' %>
-  <%= f.text_field :content %>
-
-  <%= f.submit '作成' %>
+    <%= f.submit '作成' %>
 <% end %>
